@@ -9,5 +9,11 @@
 Node* Node::min_node()
 {
     // TODO
+  if(is_empty()){
     return nullptr;
+  }
+  if (left -> is_empty()){
+    return this;
+  }
+  return left -> min_node();
 }

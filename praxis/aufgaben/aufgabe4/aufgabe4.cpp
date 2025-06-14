@@ -9,5 +9,9 @@
 bool same_elements(std::vector<int> a, std::vector<int> b)
 {
     // TODO
-    return false;
+    if (a.size() != b.size()) return false; 
+    std::sort(a.begin(), a.end());          
+    std::sort(b.begin(), b.end());
+    return a == b;                          
+
 }

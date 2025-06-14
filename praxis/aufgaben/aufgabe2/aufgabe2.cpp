@@ -8,5 +8,13 @@
 size_t Element::length()
 {
     // TODO
-    return 0;
+    size_t size = 0;
+    Element* current = this;
+    
+
+    while (!current -> is_empty()){
+        size++;
+        current = current-> next;
+    }
+    return size;
 }

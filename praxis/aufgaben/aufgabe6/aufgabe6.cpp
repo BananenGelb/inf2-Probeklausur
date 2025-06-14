@@ -13,5 +13,26 @@
 std::string Node::path(int key_)
 {
     // TODO
-    return "";
+    if ( key == key_){
+        return "";
+    }
+    if (is_empty()){
+        return "X";
+    }
+    if (key_ < key){
+        auto left_result = left ->path(key_);
+        if (left_result == "X"){
+            return "X";
+        }else{
+            return "L" + left_result;
+        }
+    }
+    if (key_ > key){
+        auto right_result = right -> path(key_);
+        if (right_result == "X"){
+            return "X";
+        }else{
+            return "R" + right_result;
+        }
+    }
 }

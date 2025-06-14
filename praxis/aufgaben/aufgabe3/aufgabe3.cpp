@@ -9,5 +9,11 @@
 std::vector<int> Element::values()
 {
     // TODO
-    return {};
+    std::vector<int> End_Vektor = {};
+    Element* current = this;
+    while(current != nullptr && !current-> is_empty()){
+        End_Vektor.push_back(current ->value);
+        current = current ->next;
+    }
+    return End_Vektor;
 }
