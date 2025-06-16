@@ -6,5 +6,18 @@
 Node* Node::max_node()
 {
     // TODO
-    return nullptr;
+   Node* max = this;
+    if (left) {
+        Node* left_max = left->max_node();
+        if (left_max->value > max->value) {
+            max = left_max;
+        }
+    }
+    if (right) {
+        Node* right_max = right->max_node();
+        if (right_max->value > max->value) {
+            max = right_max;
+        }
+    }
+    return max;
 }

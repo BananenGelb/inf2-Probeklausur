@@ -6,5 +6,11 @@
 int Node::sum()
 {
     // TODO
-    return 0;
+    int result = value;
+    Node* current = next;
+    while(current != nullptr){
+        result += current-> value;
+        current = current->next;
+    }
+    return result;
 }

@@ -7,5 +7,11 @@
 bool is_sorted_desc(const std::vector<int>& v)
 {
     // TODO: implementieren
-    return false;
+    for (int i = 0; i+1<v.size(); i++){
+        if (v[i]<v[i+1]){
+            return false;
+        }
+    }
+    return true;
+    
 }
